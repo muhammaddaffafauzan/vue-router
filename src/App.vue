@@ -1,36 +1,30 @@
 <template>
-  <Navbar :idMenu="idMenu" :key="idMenu"/>
-  <router-view :idMenu="setMenu($event)" />
+  <Navbar :idMenu="idMenu" :key="idMenu" />
+  <router-view @id-menu="setMenu($event)" />
 </template>
+
 <script>
 import Navbar from './components/Navbar.vue';
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-export default{
+export default {
   name: 'App',
-  components : {
-    Navbar
+  components: {
+    Navbar,
   },
-  setup()
-  {
+  setup() {
     const idMenu = ref(1);
 
-    function setMenu(id)
-    {
+    function setMenu(id) {
       idMenu.value = id;
     }
-    return{
+
+    return {
       setMenu,
       idMenu,
-    }
-  }
-}
+    };
+  },
+};
 </script>
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-</style>
+
+<style></style>
