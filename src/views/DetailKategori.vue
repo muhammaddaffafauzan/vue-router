@@ -1,5 +1,5 @@
 <template>
-  <h1>Produk</h1>
+  <h1>kategori {{ DetailKategori.nama }}</h1>
   <div class="flex-container">
     <div v-for="produk in state" :key="produk.id" class="card">
     <router-link class="container" :to="{ name: 'Detail', params: {id_produk: produk.id}}">
@@ -12,17 +12,25 @@
 <script>
 import { onMounted, reactive } from 'vue';
 import { produk } from '@/assets/produk';
+import { kategori } from '../assets/kategori';
 
 export default {
+  props : [
+    'id_kategori'
+  ],
   setup(props, context) {
+    const DetailKategori = kategori['kategori'].find(function (item) {
+      return item.id == props.id_kategori;
+    });
     const state = reactive(produk["produk"])
 
     onMounted(() => {
-      context.emit('id-menu', 4);
+      context.emit('id-menu', 5 );
     });
 
     return {
-      state
+      state,
+      DetailKategori
     }
   },
 };

@@ -1,8 +1,7 @@
 <template>
   <h1>Home</h1>
 </template>
-
-<script>
+<script lang="ts">
 import { onMounted } from 'vue';
 
 export default {

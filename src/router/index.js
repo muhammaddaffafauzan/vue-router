@@ -4,6 +4,8 @@ import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue"
 import Produk from "@/views/Produk.vue"
 import Detail from "@/views/Detail.vue"
+import Kategori from "@/views/Kategori.vue"
+import DetailKategori from "@/views/DetailKategori.vue"
 
 const routes = [ 
   {
@@ -27,11 +29,23 @@ const routes = [
     component: Produk,
   },
   {
+    path: "/kategori",
+    name: "Kategori",
+    component: Kategori,
+  },
+  {
+    path: "/DetailKategori/:id_kategori",
+    name: "DetailKategori",
+    component: DetailKategori,
+    props: true
+  },
+  {
     path: "/detail/:id_produk",
     name: "Detail",
     component: Detail,
     props: true
   },
+  
 ];
 
 const router = createRouter({
