@@ -7,7 +7,7 @@
 import { produk } from '../assets/produk';
 export default {
   props : [
-    'id_kategori'
+    'kategori_id'
   ],
   props: ['id_produk'],
   setup(props) {
