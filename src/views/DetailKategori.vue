@@ -1,6 +1,8 @@
 <template>
+  <h1>Kategori {{ detail.nama }}</h1>
   <div class="flex-container">
       <div v-for="produk in data" :key="produk.id" class="card">
+        <img class="img" :src="getImgSrc(produk.img)" alt="Category image">
       <router-link class="container" :to="{ name : 'Detail', params:{id_produk : produk.id}}">
           <h4>{{produk.nama }}</h4>
       </router-link>
@@ -17,6 +19,7 @@ export default {
       "id_kategori",
   ],
   setup(props){
+    
       const detail = kategori["kategori"].find(function(item) {
           return item.id == props.id_kategori
           
@@ -25,11 +28,15 @@ export default {
           return detail.id == a.id_kategori
           
       });
+      const getImgSrc = (imgFileName) => {
+        return '../src/assets/img/' + imgFileName + '';
+      }
       
       
       return{
           detail,
-          data
+          data,
+          getImgSrc
           
 
       }
@@ -38,6 +45,12 @@ export default {
 </script>
 
 <style scoped>
+.img{
+  width: 200px;
+}
+h1{
+  text-align: center;
+}
 .flex-container {
   display: flex;
 }

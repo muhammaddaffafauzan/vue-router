@@ -2,6 +2,7 @@
   <h1>Produk</h1>
   <div class="flex-container">
     <div v-for="produk in state" :key="produk.id" class="card">
+      <img class="img" :src="getImgSrc(produk.img)" alt="Category image">
     <router-link class="container" :to="{ name: 'Detail', params: {id_produk: produk.id}}">
       <h4>{{ produk.nama }}</h4>
     </router-link>
@@ -20,17 +21,28 @@ export default {
     onMounted(() => {
       context.emit('id-menu', 4);
     });
-
+    const getImgSrc = (imgFileName) => {
+        return '../src/assets/img/' + imgFileName + '';
+      }
     return {
-      state
+      state,
+      getImgSrc
     }
   },
 };
 </script>
 
 <style scoped>
+.img{
+  width: 100px;
+}
+
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
+}
+h1{
+  text-align: center;
 }
 
 .card {
@@ -40,6 +52,7 @@ export default {
   min-width: 200px;
   cursor: pointer;
   text-align: center;
+ 
 }
 
 .card:hover {
