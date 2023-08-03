@@ -1,5 +1,6 @@
 <template>
-  <div v-if="detail == undefined">Error</div>
+  <div v-if="detail == undefined"
+  >Error</div>
   <div v-else>
   <h1>Detail {{ detail.nama }}</h1>
   <h4>Detail {{ detail.harga }}</h4>
@@ -24,5 +25,7 @@ export default {
 };
 </script>
 <style>
-
+h4{
+text-align: center;
+}
 </style>

@@ -7,6 +7,9 @@ import Detail from "@/views/Detail.vue"
 import Kategori from "@/views/Kategori.vue"
 import DetailKategori from "@/views/DetailKategori.vue"
 
+import PageNotFound from "@/views/PageNotFound.vue"
+import Login from "@/views/Login.vue"
+import Register from "@/views/Register.vue"
 const routes = [ 
   {
     path: "/", 
@@ -27,11 +30,31 @@ const routes = [
     path: "/produk",
     name: "Produk",
     component: Produk,
+    beforeEnter: (to, from, next) => {
+      const loggedInUser = true;
+      if (loggedInUser) {
+        next(); // Lanjutkan navigasi ke halaman produk jika sudah login
+      } else {
+        next("/login"); // Alihkan ke halaman login jika belum login
+      }
+    },
   },
   {
     path: "/kategori",
     name: "Kategori",
     component: Kategori,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    props: true
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
+    props: true
   },
   {
     path: "/DetailKategori/:id_kategori",
@@ -45,7 +68,7 @@ const routes = [
     component: Detail,
     props: true
   },
-  
+  { path: '/:pathMatch(.*)*', component: PageNotFound },
 ];
 
 const router = createRouter({

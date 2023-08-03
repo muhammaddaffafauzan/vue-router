@@ -89,21 +89,21 @@ export const produk = {
       'id': 13,
       'nama': 'bola bliter',
       'harga': 'Rp. 359.000,00',
-      'id_kategori': 5,
+      'id_kategori': 50,
       'img' : '../img/p-5-1.png'
     },
     {
       'id': 14,
       'nama': 'raket yonex',
       'harga': 'Rp. 989.000,00',
-      'id_kategori': 5,
+      'id_kategori': 50,
       'img' : '../img/p-5-2.png'
     },
     {
       'id': 15,
       'nama': 'bola basket',
       'harga': 'Rp. 457.000,00',
-      'id_kategori': 5,
+      'id_kategori': 50,
       'img' : '../img/p-5-3.png'
     },
   ],

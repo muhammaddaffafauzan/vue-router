@@ -5,6 +5,7 @@
       <img class="img" :src="getImgSrc(produk.img)" alt="Category image">
     <router-link class="container" :to="{ name: 'Detail', params: {id_produk: produk.id}}">
       <h4>{{ produk.nama }}</h4>
+      <h3>{{ produk.harga }}</h3>
     </router-link>
     </div>
   </div>
@@ -35,6 +36,8 @@ export default {
 <style scoped>
 .img{
   width: 100px;
+  margin-top: 50px;
+  position: sticky;
 }
 
 .flex-container {
@@ -52,14 +55,18 @@ h1{
   min-width: 200px;
   cursor: pointer;
   text-align: center;
- 
+  border-radius: 20px;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-color: black;
 }
 
 .container {
   padding: 2px 16px;
+  color: black;
+  text-decoration: none;
+  position: sticky;
 }
 </style>
