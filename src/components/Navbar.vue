@@ -20,12 +20,16 @@
       <router-link :class="{ active: rl_5 }" :to="{ name: 'Kategori' }"
         >Kategori</router-link>
     </li>
-    <li style="margin-left: 55%;">
-      <router-link :class="{ active: rl_6 }" :to="{ name: 'Login' }"
+    <li>
+      <router-link :class="{ active: rl_6 }" :to="{ name: 'Counter' }"
+        >Counter</router-link>
+    </li>
+    <li style="margin-left: 50%;">
+      <router-link :class="{ active: rl_7 }" :to="{ name: 'Login' }"
         >Login</router-link>
     </li>
     <li>
-      <router-link :class="{ active: rl_7 }" :to="{ name: 'Register' }"
+      <router-link :class="{ active: rl_8 }" :to="{ name: 'Register' }"
         >Register</router-link>
     </li>
   </ul>
@@ -46,6 +50,7 @@ export default {
     const rl_5 = ref(false);
     const rl_6 = ref(false);
     const rl_7 = ref(false);
+    const rl_8 = ref(false);
 
     if (props.idMenu == 1) {
       rl_1.value = true;
@@ -55,6 +60,7 @@ export default {
       rl_5.value = false;
       rl_6.value = false;
       rl_7.value = false;
+      rl_8.value = false;
     } else if (props.idMenu == 2) {
       rl_1.value = false;
       rl_2.value = true;
@@ -63,6 +69,7 @@ export default {
       rl_5.value = false;
       rl_6.value = false;
        rl_7.value = false;
+       rl_8.value = false;
     } else if (props.idMenu == 3) {
       rl_1.value = false;
       rl_2.value = false;
@@ -71,6 +78,7 @@ export default {
       rl_5.value = false;
       rl_6.value = false;
        rl_7.value = false;
+       rl_8.value = false;
     } else if (props.idMenu == 4) {
       rl_1.value = false;
       rl_2.value = false;
@@ -78,7 +86,8 @@ export default {
       rl_4.value = true;
       rl_5.value = false; 
       rl_6.value = false;
-       rl_7.value = false;   
+       rl_7.value = false;
+       rl_8.value = false;   
     } else if (props.idMenu == 5) {
       rl_1.value = false;
       rl_2.value = false;
@@ -86,7 +95,8 @@ export default {
       rl_4.value = false;
       rl_5.value = true;  
       rl_6.value = false;
-       rl_7.value = false;  
+       rl_7.value = false;
+       rl_8.value = false;  
 }   else if (props.idMenu == 6) {
       rl_1.value = false;
       rl_2.value = false;
@@ -94,6 +104,8 @@ export default {
       rl_4.value = false;
       rl_5.value = false;   
       rl_6.value = true; 
+      rl_7.value = false;
+      rl_8.value = false;
 }
 else if (props.idMenu == 7) {
       rl_1.value = false;
@@ -104,6 +116,16 @@ else if (props.idMenu == 7) {
       rl_6.value = false; 
       rl_7.value = true; 
 }
+else if (props.idMenu == 8) {
+      rl_1.value = false;
+      rl_2.value = false;
+      rl_3.value = false;
+      rl_4.value = false;
+      rl_5.value = false;   
+      rl_6.value = false; 
+      rl_7.value = false;
+      rl_8.value = true; 
+}
 
     return {
       rl_1,
@@ -112,7 +134,8 @@ else if (props.idMenu == 7) {
       rl_4,
       rl_5,
       rl_6,
-      rl_7
+      rl_7,
+      rl_8
     }
   },
 };

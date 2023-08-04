@@ -41,7 +41,7 @@
     },
     setup(props, context) {
       onMounted(() => {
-        context.emit('id-menu', 6);
+        context.emit('id-menu', 7);
       });
     },
   };

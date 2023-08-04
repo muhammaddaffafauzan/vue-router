@@ -38,7 +38,7 @@ export default {
   },
   setup(props, context) {
     onMounted(() => {
-      context.emit('id-menu', 7);
+      context.emit('id-menu', 8);
     });
   },
 };

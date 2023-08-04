@@ -6,6 +6,7 @@ import Produk from "@/views/Produk.vue"
 import Detail from "@/views/Detail.vue"
 import Kategori from "@/views/Kategori.vue"
 import DetailKategori from "@/views/DetailKategori.vue"
+import Counter from "@/views/Counter.vue"
 
 import PageNotFound from "@/views/PageNotFound.vue"
 import Login from "@/views/Login.vue"
@@ -43,6 +44,11 @@ const routes = [
     path: "/kategori",
     name: "Kategori",
     component: Kategori,
+  },
+  {
+    path: "/counter",
+    name: "Counter",
+    component: Counter,
   },
   {
     path: "/login",
