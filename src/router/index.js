@@ -7,6 +7,7 @@ import Detail from "@/views/Detail.vue"
 import Kategori from "@/views/Kategori.vue"
 import DetailKategori from "@/views/DetailKategori.vue"
 import Counter from "@/views/Counter.vue"
+import Todo from "@/views/Todo.vue"
 
 import PageNotFound from "@/views/PageNotFound.vue"
 import Login from "@/views/Login.vue"
@@ -49,6 +50,11 @@ const routes = [
     path: "/counter",
     name: "Counter",
     component: Counter,
+  },
+  {
+    path: "/todo",
+    name: "Todo",
+    component: Todo,
   },
   {
     path: "/login",
